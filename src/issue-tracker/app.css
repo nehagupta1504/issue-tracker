@@ -1,0 +1,177 @@
+/* used for things that should be hidden in the ui,
+but useful for people who use screen readers */
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+}
+
+.toggle-all {
+    width: 40px !important;
+    height: 60px !important;
+    right: auto !important;
+}
+
+.toggle-all-label {
+    pointer-events: none;
+}
+
+/* New styles for description support */
+.description-input {
+    margin-top: 2px !important;
+    border-top: 1px solid #e6e6e6 !important;
+    padding-top: 10px !important;
+    font-size: 18px !important;
+    background-color: #f9f9f9 !important;
+}
+
+/* Import base styles */
+@import './base.css';
+
+/* Task ID styles */
+.task-id {
+    display: inline-block;
+    font-size: 14px;
+    color: var(--text-color);
+    background-color: var(--hover-color);
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-right: 10px;
+    font-family: monospace;
+}
+
+.content-container {
+    flex: 1;
+    padding: 15px 15px 15px 0;
+    cursor: pointer;
+}
+
+.description {
+    font-size: 14px;
+    color: #777;
+    margin-top: 8px;
+    padding-left: 10px;
+    border-left: 3px solid #e6e6e6;
+}
+
+.truncated-description {
+    color: #777;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.input-container {
+    padding: 16px;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.input-container.input-vertical {
+    display: block;
+}
+
+.input-fields {
+    margin-left: 44px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+}
+
+.add-button {
+    background-color: #2ea44f;
+    color: #ffffff;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+.add-button:hover {
+    background-color: #2c974b;
+}
+
+.add-button:active {
+    background-color: #298e46;
+}
+
+.expanded .view {
+    height: auto !important;
+    padding: 15px !important;
+}
+
+.expanded .description {
+    display: block;
+    margin-top: 10px;
+}
+
+.edit-container {
+    flex: 1;
+    padding: 0 15px;
+}
+
+/* Adjust main input styles */
+.new-todo {
+    padding: 16px !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 6px !important;
+    margin-bottom: 8px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.new-todo:focus {
+    border-color: #2ea44f !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(46, 164, 79, 0.1) !important;
+}
+
+/* Status Select and Colors */
+.todoapp .todo-list li .status-select {
+    margin: 0 15px 15px 60px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.todoapp .todo-list li .status-select[value="Open"] {
+    color: #28a745;
+    border-color: #28a745;
+    background-color: rgba(40, 167, 69, 0.1);
+}
+
+.todoapp .todo-list li .status-select[value="In Progress"] {
+    color: #ffc107;
+    border-color: #ffc107;
+    background-color: rgba(255, 193, 7, 0.1);
+}
+
+.todoapp .todo-list li .status-select[value="Closed"] {
+    color: #6c757d;
+    border-color: #6c757d;
+    background-color: rgba(108, 117, 125, 0.1);
+}
+
+.todoapp .todo-list li .status-select option {
+    padding: 5px;
+    font-weight: 500;
+    color: #4d4d4d;
+    background-color: #fff;
+}

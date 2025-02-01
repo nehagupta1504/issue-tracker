@@ -1,0 +1,129 @@
+.progress-container {
+    margin-top: 12px;
+    padding: 8px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+.progress-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 8px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #28a745;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    font-size: 12px;
+    color: #6c757d;
+    min-width: 36px;
+}
+
+.subtasks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.subtask-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 8px;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+}
+
+.subtask-checkbox {
+    margin: 0;
+}
+
+.subtask-title {
+    flex: 1;
+    font-size: 14px;
+    color: #495057;
+}
+
+.subtask-title.completed {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.subtask-edit-input {
+    flex: 1;
+    padding: 2px 4px;
+    font-size: 14px;
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+}
+
+.remove-subtask-button {
+    background: none;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    padding: 0 4px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.subtask-item:hover .remove-subtask-button {
+    opacity: 1;
+}
+
+.add-subtask-form {
+    display: flex;
+    gap: 8px;
+}
+
+.add-subtask-input {
+    flex: 1;
+    padding: 6px 12px;
+    font-size: 14px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    transition: border-color 0.2s;
+}
+
+.add-subtask-input:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.add-subtask-button {
+    padding: 6px 12px;
+    font-size: 14px;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.add-subtask-button:hover:not(:disabled) {
+    background-color: #218838;
+}
+
+.add-subtask-button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+    opacity: 0.65;
+}

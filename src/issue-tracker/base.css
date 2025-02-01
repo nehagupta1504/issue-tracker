@@ -1,0 +1,77 @@
+/* Import theme variables */
+@import './theme.css';
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    font-size: 100%;
+    vertical-align: baseline;
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.4em;
+    background: var(--bg-color);
+    color: var(--text-color);
+    min-width: 230px;
+    max-width: 550px;
+    margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 300;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.todoapp {
+    background: var(--bg-color);
+    margin: 130px 0 40px 0;
+    position: relative;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.todoapp input::-webkit-input-placeholder {
+    font-style: italic;
+    color: var(--input-placeholder);
+}
+
+.todoapp input::-moz-placeholder {
+    font-style: italic;
+    color: var(--input-placeholder);
+}
+
+.todoapp input::input-placeholder {
+    font-style: italic;
+    color: var(--input-placeholder);
+}
+
+.todoapp h1 {
+    position: absolute;
+    top: -120px;
+    width: 100%;
+    font-size: 80px;
+    font-weight: 200;
+    text-align: center;
+    color: var(--text-color);
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+    transition: color 0.3s ease;
+}
